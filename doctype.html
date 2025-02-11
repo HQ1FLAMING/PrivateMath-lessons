@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google OAuth Login</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <h2>Google OAuth Login</h2>
+    <div id="g_id_onload"
+         data-client_id="132320682623-uvm4h3sk1um3iahigud5hjje8q5tg96u.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse"
+         data-auto_prompt="false"
+         data-context="signin"
+         data-ux_mode="redirect">
+    </div>
+    <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"></div>
+
+    <script>
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            
+            try {
+                const payload = JSON.parse(atob(response.credential.split('.')[1]));
+                console.log("User Info:", payload);
+                alert("Hello, " + payload.name);
+            } catch (error) {
+                console.error("Error decoding JWT token", error);
+            }
+        }
+    </script>
+</body>
+</html>
