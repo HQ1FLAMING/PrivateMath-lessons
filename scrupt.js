@@ -1,6 +1,6 @@
 const signUpButton=document.getElementById('signUpButton');
-const signInButton=document.getElementById('LoginButton');
-const signInForm=document.getElementById('LoginIn');
+const signInButton=document.getElementById('signButton');
+const signInForm=document.getElementById('signIn');
 const signUpForm=document.getElementById('signup');
 
 signUpButton.addEventListener('click',function(){
@@ -8,6 +8,6 @@ signUpButton.addEventListener('click',function(){
     signUpForm.style.display="block";
 })
 signInButton.addEventListener('click', function(){
-    LoginForm.style.display="block";
+    signinSForm.style.display="block";
     signUpForm.style.display="none";
 })
