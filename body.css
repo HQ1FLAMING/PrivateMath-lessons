@@ -1,0 +1,17 @@
+    width: 1300px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    border-left-color: rgb(232, 0, 255);
+    border-right-color: rgb(232, 0, 255);
+    border-bottom-color: rgb(232, 0, 255);
+    border-top-color: rgb(232, 0, 255);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    background-color: rgb(5, 115, 178);
+    height: 100%;
+    background-image: url(images/body.png);
+}
